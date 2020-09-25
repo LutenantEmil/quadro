@@ -174,6 +174,13 @@ Serial.begin(9600);  // настройка манитора порта
 
 
 void loop() { //выполняется в цикле (при работе)
+ sensors_event_t event; 
+ accel.getEvent(&event);
+ 
+ // Вывод результатов (ускорение измеряется по формуле m/s^2)
+ Serial.print("X: "); Serial.print(event.acceleration.x); Serial.print(" ");
+ Serial.print("Y: "); Serial.print(event.acceleration.y); Serial.print(" ");
+ Serial.print("Z: "); Serial.print(event.acceleration.z); Serial.print(" ");Serial.println("m/s^2 ");
 
 ch1 = pulseIn(rcPin1, HIGH, 250000) ;  //ch# принимает значение канала rcPin#
 ch2 = pulseIn(rcPin2, HIGH, 250000) ;  //ch# принимает значение канала rcPin#
