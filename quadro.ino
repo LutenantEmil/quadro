@@ -396,7 +396,7 @@ Serial.println(pid_dx_otr);
           
  }
       
-delay(5);
+
   
 }
     
