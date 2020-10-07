@@ -3,6 +3,10 @@
 #include <Adafruit_Sensor.h>
 #include <Adafruit_ADXL345_U.h>
 
+double eror = 0;
+double ch1polP = 0;
+double ch1otrP = 0;
+int P = 20;
 
 int rcPin1 = A0; //подключение 1 го канала приемника к входу А0
 int rcPin2 = A1; //подключение 2 го канала приемника к входу А1
@@ -14,7 +18,6 @@ Servo motor1; //обозначение motor1 как сервопривода
 Servo motor2; //обозначение motor2 как сервопривода
 Servo motor3; //обозначение motor3 как сервопривода
 Servo motor4; //обозначение motor4 как сервопривода
-
 
 
 
